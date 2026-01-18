@@ -1,0 +1,38 @@
+{
+  "name": "ui-code-health-check",
+  "version": "0.0.0",
+  "description": "A package to perform a series of code quality checks including linting, testing, spell checking, TypeScript checking, and building.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "ui-code-health-check": "dist/index.js"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "build": "tsc",
+    "ch": "node dist/index.js",
+    "prettier": "prettier --write \"src/**/*.{ts,tsx}\""
+  },
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "^8.53.0",
+    "@typescript-eslint/parser": "^8.53.0",
+    "cspell": "^9.4.0",
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.0",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "code",
+    "health",
+    "check",
+    "lint",
+    "test",
+    "typescript"
+  ],
+  "author": "juandrepanther",
+  "license": "MIT"
+}
