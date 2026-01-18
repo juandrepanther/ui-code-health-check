@@ -39,7 +39,9 @@ for (const step of steps) {
     )
     continue
   }
+
   const stepStart = Date.now()
+
   try {
     console.log(chalk.blueBright(`\n▶ ${step.name}...`))
     execSync(step.cmd, { stdio: 'inherit' })
