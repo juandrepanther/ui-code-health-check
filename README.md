@@ -1,17 +1,22 @@
-## This package is at testing phase
+<img src="src/assets/logo.png" alt="UI Code Health Check Logo" width="180" />
+<br>
 
-# UI Code Health Check
+**UI Code Health Check** is a simple CLI helper tool that automates your project's key quality checks—**linting**, **testing**, **TypeScript checking**, and **building**—with a single command. Instead of running each script separately, this tool executes your predefined scripts in order, saving you time and ensuring consistency across your workflow.
 
-**UI Code Health Check** is a CLI tool that helps you maintain high code quality in your TypeScript projects. It automates common checks such as linting, testing, spell checking, type checking, and building, running only the steps that are configured in your project.
+- [Installation](#installation)
+- [Usage](#usage)
+- [How It Works](#how-it-works)
+- [Configuration](#configuration)
+- [Example `package.json` Scripts](#example-packagejson-scripts)
 
 ## Features
 
-- **Linting**: Runs ESLint to enforce code style and best practices.
-- **Testing**: Executes your project's test suite (if defined).
-- **Spell Checking**: Uses cspell to catch spelling mistakes (if defined).
-- **TypeScript Checking**: Runs TypeScript type checks (if defined).
-- **Build**: Executes your build script (if defined).
-- **Smart Skipping**: Automatically skips any step if the corresponding script is missing in your `package.json`.
+- **Linting**: Checks code style with [ESLint](https://eslint.org/).
+- **Testing**: Runs your test suite (e.g., [Vitest](https://vitest.dev/)).
+- **Spell Checking**: Finds typos with [cspell](https://cspell.org/).
+- **Type Checking**: Verifies types with [TypeScript](https://www.typescriptlang.org/).
+- **Build**: Runs your build process (e.g., [Vite](https://vitejs.dev/)).
+- **Smart Skipping**: Skips any missing scripts automatically.
 
 ## Installation
 
@@ -58,16 +63,20 @@ If a script is missing, that step is skipped.
 Then run:
 
 ```bash
-npm run your-script-name
+npm run <your-script-name>
 ```
 
 ## Configuration
 
-- **ESLint**: Ensure you have a `lint` script in your `package.json` (e.g., `"lint": "eslint ."`).
+- **ESLint**: Add a `lint` script (e.g., `"lint": "eslint ."`).
 - **Testing**: Add a `test` script (e.g., `"test": "vitest run"`).
-- **Spell Checking**: Add a `cspell` script (e.g., `"cspell": "cspell '**'"`).
-- **Type Checking**: Add a `ts-ch` script (e.g., `"ts-ch": "tsc --noEmit"`).
-- **Build**: Add a `build` script (e.g., `"build": "tsc"` or your build tool).
+- **Spell Checking**: Add a `cspell` script (e.g., `"cspell": "cspell \"src/**/*.{ts,tsx,md}\""`).
+- **Type Checking**: Add a `ts-ch` script (e.g., `"ts-ch": "npx tsc --noemit"`).
+- **Build**: Add a `build` script (e.g., `"build": "tsc && vite build"`).
+
+> **Note:**  
+> The `cspell` and `ts-ch` scripts are enforced by this tool and cannot be renamed or customized.  
+> Other scripts like `lint`, `test`, and `build` are chosen for compatibility with industry standards.
 
 ## Example `package.json` Scripts
 
@@ -76,7 +85,7 @@ npm run your-script-name
   "scripts": {
     "lint": "eslint .",
     "test": "vitest run",
-    "cspell": "cspell \"src/**/*.{ts,tsx,md}\" ",
+    "cspell": "cspell \"src/**/*.{ts,tsx,md}\"",
     "ts-ch": "npx tsc --noemit",
     "build": "tsc && vite build"
   }
