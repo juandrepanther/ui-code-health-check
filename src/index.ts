@@ -14,7 +14,7 @@ const steps = [
 const start = Date.now()
 
 console.log(chalk.bgBlue.white.bold(msg.HEADER))
-console.log(chalk.white.bold(msg.INFO('1.0.0', 'juandrepanther')))
+console.log(chalk.white.bold(msg.INFO('1.0.1', 'juandrepanther')))
 
 let scripts: Record<string, string> = {}
 try {
