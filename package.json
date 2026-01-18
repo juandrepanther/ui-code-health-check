@@ -1,5 +1,9 @@
 {
   "name": "ui-code-health-check",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juandrepanther/ui-code-health-check.git"
+  },
   "version": "0.0.0",
   "description": "A package to perform a series of code quality checks including linting, testing, spell checking, TypeScript checking, and building.",
   "main": "dist/index.js",
