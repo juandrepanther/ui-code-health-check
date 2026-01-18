@@ -30,23 +30,17 @@ yarn add -D ui-code-health-check
 After installation, you can run the health check from your project root:
 
 ```bash
-npx ui-code-health-check
+npx ch
 ```
 
-Or add it as a script in your `package.json`:
+Or add it as a script in your `package.json` (example):
 
 ```json
 {
   "scripts": {
-    "health-check": "ui-code-health-check"
+    "ch": "npx ch"
   }
 }
-```
-
-Then run:
-
-```bash
-npm run health-check
 ```
 
 ## How It Works
@@ -56,17 +50,23 @@ The tool checks your `package.json` for the following scripts and runs them in o
 1. `lint`
 2. `test`
 3. `cspell`
-4. `typecheck`
+4. `ts-ch`
 5. `build`
 
 If a script is missing, that step is skipped.
 
+Then run:
+
+```bash
+npm run ch
+```
+
 ## Configuration
 
 - **ESLint**: Ensure you have a `lint` script in your `package.json` (e.g., `"lint": "eslint ."`).
-- **Testing**: Add a `test` script (e.g., `"test": "jest"`).
+- **Testing**: Add a `test` script (e.g., `"test": "vitest run"`).
 - **Spell Checking**: Add a `cspell` script (e.g., `"cspell": "cspell '**'"`).
-- **Type Checking**: Add a `typecheck` script (e.g., `"typecheck": "tsc --noEmit"`).
+- **Type Checking**: Add a `ts-ch` script (e.g., `"ts-ch": "tsc --noEmit"`).
 - **Build**: Add a `build` script (e.g., `"build": "tsc"` or your build tool).
 
 ## Example `package.json` Scripts
@@ -75,10 +75,10 @@ If a script is missing, that step is skipped.
 {
   "scripts": {
     "lint": "eslint .",
-    "test": "jest",
-    "cspell": "cspell '**'",
-    "typecheck": "tsc --noEmit",
-    "build": "tsc"
+    "test": "vitest run",
+    "cspell": "cspell \"src/**/*.{ts,tsx,md}\" ",
+    "ts-ch": "npx tsc --noemit",
+    "build": "tsc && vite build"
   }
 }
 ```

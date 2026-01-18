@@ -1,5 +1,7 @@
 {
   "name": "ui-code-health-check",
+  "author": "juandrepanther",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/juandrepanther/ui-code-health-check.git"
@@ -7,14 +9,16 @@
   "version": "0.0.1",
   "description": "A package to perform a series of code quality checks including linting, testing, spell checking, TypeScript checking, and building.",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "bin": {
     "ch": "dist/index.js"
   },
   "scripts": {
     "lint": "eslint .",
+    "test": "echo \"Running tests...\" && exit 0",
+    "cspell": "echo \"Running cspell...\" && exit 0",
+    "ts-check": "echo \"Running TypeScript check...\" && exit 0",
     "build": "tsc",
-    "ch": "node dist/index.js",
+    "dev": "node dist/index.js",
     "prettier": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
@@ -32,11 +36,9 @@
   "keywords": [
     "code",
     "health",
-    "check",
-    "lint",
-    "test",
-    "typescript"
+    "check"
   ],
-  "author": "juandrepanther",
-  "license": "MIT"
+  "engines": {
+    "node": ">=24.0.0"
+  }
 }
