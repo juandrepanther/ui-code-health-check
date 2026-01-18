@@ -1,4 +1,4 @@
-# TESTING NEW PACKAGE, NOT FOR USE YET
+## This package is at testing phase
 
 # UI Code Health Check
 
@@ -38,7 +38,7 @@ Or add it as a script in your `package.json` (example):
 ```json
 {
   "scripts": {
-    "ch": "npx ch"
+    "your-script-name": "ch"
   }
 }
 ```
@@ -58,7 +58,7 @@ If a script is missing, that step is skipped.
 Then run:
 
 ```bash
-npm run ch
+npm run your-script-name
 ```
 
 ## Configuration

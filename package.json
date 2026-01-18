@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/juandrepanther/ui-code-health-check.git"
   },
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A package to perform a series of code quality checks including linting, testing, spell checking, TypeScript checking, and building.",
   "main": "dist/index.js",
   "bin": {
@@ -34,6 +34,7 @@
     "typescript": "^5.9.3"
   },
   "keywords": [
+    "ui",
     "code",
     "health",
     "check"
