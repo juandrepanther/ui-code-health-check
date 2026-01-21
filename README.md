@@ -70,7 +70,7 @@ Then run:
 npm run <your-script-name>
 ```
 
-## Example `package.json` Scripts
+## Example `package.json`
 
 ```json
 {
@@ -84,9 +84,9 @@ npm run <your-script-name>
 }
 ```
 
-    > **Note:**
-    > The `cspell` and `ts-ch` scripts are enforced by this tool and cannot be renamed or customized.
-    > Other scripts like `lint`, `test`, and `build` are chosen for compatibility with industry standards.
+> **Note:**
+> The `cspell` and `ts-ch` scripts are enforced by this tool and cannot be renamed or customized.
+> Other scripts like `lint`, `test`, and `build` are chosen for compatibility with industry standards.
 
 ## License
 
