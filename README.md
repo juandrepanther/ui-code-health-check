@@ -1,12 +1,16 @@
-<img src="src/assets/logo.png" alt="UI Code Health Check Logo" width="180" />
-<br>
+```
+  ____ _   _
+ / ___| | | |
+| |   | |_| |
+| |___|  _  |
+ \____|_| |_|
+```
 
 **UI Code Health Check** is a simple CLI helper tool that automates your project's key quality checks—**linting**, **testing**, **TypeScript checking**, and **building**—with a single command. Instead of running each script separately, this tool executes your predefined scripts in order, saving you time and ensuring consistency across your workflow.
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [How It Works](#how-it-works)
-- [Configuration](#configuration)
 - [Example `package.json` Scripts](#example-packagejson-scripts)
 
 ## Features
@@ -66,18 +70,6 @@ Then run:
 npm run <your-script-name>
 ```
 
-## Configuration
-
-- **ESLint**: Add a `lint` script (e.g., `"lint": "eslint ."`).
-- **Testing**: Add a `test` script (e.g., `"test": "vitest run"`).
-- **Spell Checking**: Add a `cspell` script (e.g., `"cspell": "cspell \"src/**/*.{ts,tsx,md}\""`).
-- **Type Checking**: Add a `ts-ch` script (e.g., `"ts-ch": "npx tsc --noemit"`).
-- **Build**: Add a `build` script (e.g., `"build": "tsc && vite build"`).
-
-> **Note:**  
-> The `cspell` and `ts-ch` scripts are enforced by this tool and cannot be renamed or customized.  
-> Other scripts like `lint`, `test`, and `build` are chosen for compatibility with industry standards.
-
 ## Example `package.json` Scripts
 
 ```json
@@ -91,6 +83,10 @@ npm run <your-script-name>
   }
 }
 ```
+
+    > **Note:**
+    > The `cspell` and `ts-ch` scripts are enforced by this tool and cannot be renamed or customized.
+    > Other scripts like `lint`, `test`, and `build` are chosen for compatibility with industry standards.
 
 ## License
 
