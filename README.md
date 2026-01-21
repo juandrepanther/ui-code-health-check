@@ -1,17 +1,11 @@
-```
-  ____ _   _
- / ___| | | |
-| |   | |_| |
-| |___|  _  |
- \____|_| |_|
-```
+# CH ✅
 
-**UI Code Health Check** is a simple CLI helper tool that automates your project's key quality checks—**linting**, **testing**, **TypeScript checking**, and **building**—with a single command. Instead of running each script separately, this tool executes your predefined scripts in order, saving you time and ensuring consistency across your workflow.
+**UI Code Health Check** - a simple CLI helper tool that automates your project's key quality checks—**linting**, **testing**, **TypeScript and spell checking**, and **building**—with a single command. Instead of running each script separately, this tool executes your predefined scripts in order, saving you time and ensuring consistency across your workflow.
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [How It Works](#how-it-works)
-- [Example `package.json` Scripts](#example-packagejson-scripts)
+- [Example `package.json`](#example-packagejson)
 
 ## Features
 
@@ -87,7 +81,3 @@ npm run <your-script-name>
 > **Note:**
 > The `cspell` and `ts-ch` scripts are enforced by this tool and cannot be renamed or customized.
 > Other scripts like `lint`, `test`, and `build` are chosen for compatibility with industry standards.
-
-## License
-
-MIT
